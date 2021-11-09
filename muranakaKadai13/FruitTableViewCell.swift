@@ -11,12 +11,8 @@ class FruitTableViewCell: UITableViewCell {
     @IBOutlet weak private var fruitCheckImageView: UIImageView!
     @IBOutlet weak private var fruitNameLabel: UILabel!
 
-    func configureLabelNameAndCheckImageView(name: String, check: Bool) {
-        fruitNameLabel.text = name
-        if check {
-            fruitCheckImageView.isHidden = false
-        } else {
-            fruitCheckImageView.isHidden = true
-        }
+    func configure(fruits: Fruits) {
+        fruitNameLabel.text = fruits.name
+        fruitCheckImageView.isHidden = !fruits.isChecked
     }
 }
