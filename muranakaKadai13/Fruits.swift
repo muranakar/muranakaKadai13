@@ -9,10 +9,5 @@ import Foundation
 
 struct Fruits {
     let name: String
-    let check: Bool
-
-    init(name: String, check: Bool) {
-        self.name = name
-        self.check = check
-    }
+    let isChecked: Bool
 }

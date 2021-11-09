@@ -8,12 +8,12 @@
 import UIKit
 
 class FruitsTableViewController: UITableViewController {
-    private var fruits: [Fruits] =
+    private let fruits: [Fruits] =
         [
-            Fruits(name: "りんご", check: false),
-            Fruits(name: "みかん", check: true ),
-            Fruits(name: "バナナ", check: false),
-            Fruits(name: "パイナップル", check: true)
+            Fruits(name: "りんご", isChecked: false),
+            Fruits(name: "みかん", isChecked: true),
+            Fruits(name: "バナナ", isChecked: false),
+            Fruits(name: "パイナップル", isChecked: true)
         ]
 
     // MARK: - Table view data source
@@ -32,10 +32,8 @@ class FruitsTableViewController: UITableViewController {
             for: indexPath
         ) as! FruitTableViewCell // swiftlint:disable:this force_cast
 
-        cell.configureLabelNameAndCheckImageView(
-            name: fruits[indexPath.row].name,
-            check: fruits[indexPath.row].check
-        )
+        cell.configure(fruits: fruits[indexPath.row])
+
         return cell
     }
 }
