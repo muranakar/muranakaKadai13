@@ -8,7 +8,7 @@
 import UIKit
 
 class FruitsTableViewController: UITableViewController {
-    private var fruits: [Fruits] =
+    private let fruits: [Fruits] =
         [
             Fruits(name: "りんご", isChecked: false),
             Fruits(name: "みかん", isChecked: true),
